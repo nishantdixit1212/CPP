@@ -2,40 +2,50 @@
 #include <string>
 using namespace std;
 
+// Account class definition
 class Account {
 private:
     double balance;
     string password;
 
 public:
-     string accountid;
-     string username;
+    string accountid;
+    string username;
 
-void setbalance(double b){
-    balance = b;
-}
-double getbalance(){
-    return balance;
-}
+    // Setter for balance
+    void setbalance(double b) {
+        balance = b;
+    }
 
-void setpassword(string p){
-    password = p;
-}
+    // Getter for balance
+    double getbalance() {
+        return balance;
+    }
 
-string getpassword(){
-    return password;
-}
+    // Setter for password
+    void setpassword(string p) {
+        password = p;
+    }
+
+    // Getter for password (not recommended for real applications)
+    string getpassword() {
+        return password;
+    }
 };
 
-int main(){
+int main() {
+    // Create an Account object
     Account a1;
+
+    // Set account details
     a1.accountid = "9719492213";
     a1.username = "abcdefghijkl";
     a1.setbalance(35000);
     a1.setpassword("123445");
-    
 
-    cout<< a1.accountid << endl;
-    cout<< a1.getbalance();
+    // Display account ID and balance
+    cout << "Account ID: " << a1.accountid << endl;
+    cout << "Balance: " << a1.getbalance() << endl;
+
     return 0;
 }
